@@ -1,0 +1,40 @@
+<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="11.135451000000002">
+<testsuite name="Reports.spec.js" timestamp="2026-10-13T06:08:16.097Z" hostname="chromium" tests="3" failures="1" skipped="0" time="12.204" errors="0">
+<testcase name="test1" classname="Reports.spec.js" time="2.29">
+</testcase>
+<testcase name="test2" classname="Reports.spec.js" time="3.153">
+</testcase>
+<testcase name="test3" classname="Reports.spec.js" time="6.761">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Reports-test3-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveTitle(expected) failed" type="expect.toHaveTitle">
+<![CDATA[  [chromium] › Reports.spec.js:15:5 › test3 ────────────────────────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected: "nopCommerce demo store"
+    Received: "Just a moment..."
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 5000ms
+        13 × locator resolved to <html dir="ltr" lang="en-us">…</html>
+           - unexpected value "Just a moment..."
+
+
+      15 | test ('test3',async({page})=> {
+      16 | await page.goto('https://demo.nopcommerce.com/');
+    > 17 | await expect (page).toHaveTitle('nopCommerce demo store');
+         |                     ^
+      18 | })
+        at C:\Users\Soniya.Desai\Desktop\Playwright\tests\Reports.spec.js:17:21
+
+    Error Context: ..\test-results\Reports-test3-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
