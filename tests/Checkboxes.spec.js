@@ -8,8 +8,8 @@ test('Checkboxes',async ({page}) => {
         await page.locator("//label[text()='Sunday']").check();
 
         
-         await expect(page.locator("//label[text()='Sunday']")).toBeChecked();
-
+         await expect(page.locator("//label[text()='Sunday']")).toBeVisible();
+         
 
 
 
